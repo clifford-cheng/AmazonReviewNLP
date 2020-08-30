@@ -69,7 +69,7 @@ The data was split into two categories: Low Rating (1-3 stars) and High Rating (
 Logistic Regression, Random Forest, Linear SVC, and Multi-Naive Bayes were train/tested on the sub-sample data and then tested on the remaining data. Linear SVC was the best model with an f1-score of 91% and 73% for predicting High Ratings and Low Ratings respectively. This is quite impressive considering the remaining data had a porportion of 78.3% High Rating and 21.7% Low Rating.
 
 <p align="center">
-<img src="images/NLP_TESTING.png" width="850" height="550">
+<img src="images/NLP_TESTING.png" width="700" height="450">
 <p/>
 
 [Back To The Top](#Semantic-Topic-Analysis)
@@ -82,11 +82,11 @@ Logistic Regression, Random Forest, Linear SVC, and Multi-Naive Bayes were train
 The next task was to obtain product specific insights from review text. K-Means, LDA, and NMF were used to find latent topics within the text data. Stemming (snowball stemmer, stemmer, etc...) and Lemmitization were tested but the most effective method was to build the database of stopwords by removing any mention of product, thereby focusing specifically on the feeling of the customer to the product. After much testing, 15 components was chosen as it optimized the balance between having product details specific enough to obtain actionable insights but general enough to properly classify text data. The NMF model would then output the top words associated with each latent topic. The NMF model required the aid of human pattern recognition in order to properly create classifications derived from understanding the relationship among the key words within each latent topic. The categorized latent topics would then be mapped to their corresponding reviews. 
 
 <p align="center">
-<img src="images/NLP_Comp_High.png" width="750" height="550">
+<img src="images/NLP_Comp_High.png" width="700" height="500">
 <p/>
 
 <p align="center">
-<img src="images/NLP_Comp_High.png" width="750" height="550">
+<img src="images/NLP_Comp_High.png" width="700" height="500">
 <p/>
 
 In order to visualize the higher dimensional vectorized text data over 1,050,000 dimensional data needed to be mapped to an interpretable 2D plot. TSNE was used as a dimensional-reduction method that preserved the distance between latent topics as the data was mapped to lower dimensions. TSNE's underlying probablitic methology counter-acted the curse of dimensionality as it preserved informational loss as the data was moved from higher to lower dimensions. The end result was a color-coded 2D map of the latent topics and their corresponding key words. 
