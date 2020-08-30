@@ -118,4 +118,3 @@ The classification of text data using semi-supervised methods enables the abilit
 - LinkedIn - [clifford-cheng](https://www.linkedin.com/in/clifford-cheng/)
 - Email - cliffpcheng@gmail.com
 
-[Back To The Top](#Semantic Topic Analysis: Amazon Product Reviews (NLP and NMF))
