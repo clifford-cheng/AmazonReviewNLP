@@ -42,7 +42,7 @@ The data consisted of 574,628 reviews (75MB json.gz) from Amazon's luxury beauty
 4. Product ASIN: Specific product ID number. 
 
 <p align="center">
-<img src="images/data_overview.png" width="600" height="500">
+<img src="images/data_overview.png" width="600" height="400">
 <p/>
 
 
