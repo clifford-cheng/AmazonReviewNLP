@@ -13,8 +13,8 @@ Low Ratings
 ### Table of Contents
 - [Description](#description)
 - [Data Understanding](#data-understanding)
-- [Data Preparation & NLP Prediction](#data-preparation)
-- [NMF Topic Analysis](#nmf)
+- [Data Preparation and NLP Prediction](#data-preparation-and-NLP-prediction)
+- [NMF Topic Analysis](#NMF-Topic-Analysis)
 - [Author-Info](#author-info)
 
 
