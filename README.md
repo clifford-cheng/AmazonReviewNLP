@@ -88,9 +88,6 @@ In order to visualize the higher dimensional vectorized text data over 1,050,000
 TSNE High Ratings | Low Ratings
 <p align="center">
 <img src="images/TSNE_High.png" width="750" height="600
-<p/>
-
-<p align="center">
 <img src="images/TSNE_Low.png" width="750" height="600
 <p/>
 
