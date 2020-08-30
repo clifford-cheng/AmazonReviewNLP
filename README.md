@@ -92,14 +92,13 @@ The next task was to obtain product specific insights from review text. K-Means,
 In order to visualize the higher dimensional vectorized text data over 1,050,000 dimensional data needed to be mapped to an interpretable 2D plot. TSNE was used as a dimensional-reduction method that preserved the distance between latent topics as the data was mapped to lower dimensions. TSNE's underlying probablitic methology counter-acted the curse of dimensionality as it preserved informational loss as the data was moved from higher to lower dimensions. The end result was a color-coded 2D map of the latent topics and their corresponding key words. 
 
 TSNE High Ratings | Low Ratings
-<p>
-<img src="images/TSNE_High.png" width="750" height="600
+<p align="center">
+<img src="images/TSNE_High.png" width="700" height="600
 <p/>
 
 
-TSNE Low Ratings
 <p align="center">
-<img src="images/TSNE_Low.png" width="750" height="600
+<img src="images/TSNE_Low.png" width="700" height="600
 <p/>
 
 
