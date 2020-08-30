@@ -98,6 +98,7 @@ TSNE High Ratings
 <img src="images/TSNE_High.png" width="850" height="600
 <p/>
 
+
 TSNE Low Ratings
 <p align="center">
 <img src="images/TSNE_High.png" width="850" height="600>
