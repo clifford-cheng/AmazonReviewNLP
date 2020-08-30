@@ -51,15 +51,15 @@ There were additional meta-data such as date/time of the review, information of 
 
 ## Data Preparation and NLP Prediction
 
-I utilized Google Colab for the running of the models as I had Colab Pro. However, Amazon SageMaker or creating an AWS Jupyter Notebook EC2 Server with a static IP address was also considered.   
+I utilized Google Colab for the running of the models as I had Colab Pro. However, Amazon SageMaker or creating an AWS Jupyter Notebook EC2 Server with a static IP address were equally robust and viable options.   
 
-The data was split into two categories: Low Rating (1-3 stars) and High Rating (4-5 stars). Splitting into 3 categories, Low Rating (1-2 stars), Average (3 stars), and High Rating (4-5), was considered but greatly dimished the power of the analysis due to limited number of 3 star samples in proportion to the other categories. After the split, the data was grouped into 24.8% (141,091) Low Rating and 74.2% (417,834) High Rating reviews. A quarter of 141,091 reviews were randomly sampled (35,272) and the same number was randomly sampled from the High Rating reviews. This would be used for training and testing the best model and had a balance of 50% Low Rating / 50% High Rating. The model would then be tested on the remaining 21.7% (105,819) Low Rating and 78.3% High Rating (382,563) review samples the model has never seen. 
+The data was split into two categories: Low Rating (1-3 stars) and High Rating (4-5 stars). Splitting into 3 categories, Low Rating (1-2 stars), Average (3 stars), and High Rating (4-5), was considered but greatly dimished the power of the analysis due to limited number of 3 star samples in proportion to the other categories. After the split, the data was grouped into 24.8% (141,091) Low Rating and 74.2% (417,834) High Rating reviews. A quarter of 141,091 reviews were randomly sampled (35,272) and the same number was randomly sampled from the High Rating reviews. This would be used for training and testing the best model and had a balance of 50% Low Rating / 50% High Rating. The model would then be tested on the remaining 21.7% (105,819) Low Rating and 78.3% High Rating (382,563) review samples that were untouched throughout this process. 
 
 <p align="center">
 <img src="images/data_split.png" width="600" height="500">
 <p/>
 
-Logistic Regression, Random Forest, Linear SVC, and Multi-Naive Bayes were train/tested on the sub-sample data and then tested on the remaining data. Linear SVC was the best model with an f1-score of 91% and 73% for predicting High Ratings and Low Ratings respectively. This is quite impressive considering the remaining data had a porportion of 78.3% High Rating and 21.7% Low Rating.
+Logistic Regression, Random Forest, Linear SVC, and Multi-Naive Bayes were train/tested on the sub-sample data and then tested on the remaining untouched data. Linear SVC was the best model with an f1-score of 91% and 73% for predicting High Ratings and Low Ratings respectively. This is quite impressive considering the remaining data had a porportion of 78.3% High Rating and 21.7% Low Rating.
 
 <p align="center">
 <img src="images/NLP_TESTING.png" width="700" height="450">
@@ -72,7 +72,7 @@ Logistic Regression, Random Forest, Linear SVC, and Multi-Naive Bayes were train
 
 ## NMF Topic Analysis
 
-The next task was to obtain product specific insights from review text. K-Means, LDA, and NMF were used to find latent topics within the text data. Stemming (snowball stemmer, stemmer, etc...) and Lemmitization were tested but the most effective method was to build the database of stopwords by removing any mention of product, thereby focusing specifically on the feeling of the customer to the product. After much testing, 15 components was chosen as it optimized the balance between having product details specific enough to obtain actionable insights but general enough to properly classify text data. The NMF model would then output the top words associated with each latent topic. The NMF model required the aid of human pattern recognition in order to properly create classifications derived from understanding the relationship among the key words within each latent topic. The categorized latent topics would then be mapped to their corresponding reviews. 
+The next task was to obtain product specific insights from review text. K-Means, LDA, and NMF were used to find latent topics within the text data. Stemming (snowball stemmer, stemmer, etc...) and Lemmitization were tested but the most effective method was to build the database of stopwords by removing any mention of product, thereby focusing specifically on the feeling of the customer to the product. After much testing, 15 components was chosen as it optimized the balance between having product details specific enough to obtain actionable insights but general enough to properly group text data. The NMF model would then output the top words associated with each latent topic. The NMF model required the aid of human pattern recognition in order to properly create classifications derived from understanding the relationship among the key words within each latent topic. The categorized latent topics would then be mapped to their corresponding reviews. 
 
 <p align="center">
 <img src="images/NMF_Comp_High.png" width="700" height="500">
@@ -82,13 +82,15 @@ The next task was to obtain product specific insights from review text. K-Means,
 <img src="images/NMF_Comp_Low.png" width="700" height="500">
 <p/>
 
-In order to visualize the higher dimensional vectorized text data over 1,050,000 dimensional data needed to be mapped to an interpretable 2D plot. TSNE was used as a dimensional-reduction method that preserved the distance between latent topics as the data was mapped to lower dimensions. TSNE's underlying probablitic methology counter-acted the curse of dimensionality as it preserved informational loss as the data was moved from higher to lower dimensions. The end result was a color-coded 2D map of the latent topics and their corresponding key words. 
+In order to visualize the higher dimensional vectorized text data, a 1,050,000+ dimensional space needed to be mapped to an interpretable 2D plot. TSNE was used as a dimensional-reduction method that preserved the distance between latent topics. TSNE's underlying probablitic methology counter-acted the curse of dimensionality as it preserved informational loss as the data was moved from higher to lower dimensions. The end result was a color-coded 2D map of the latent topics and their corresponding key words. 
 
 
 ![](images/TSNE_High.png)
 ![](images/TSNE_Low.png)
 
-The classification of text data using semi-supervised methods enables the ability to obtain greater insights from review text. Not only can sentiment analysis be obtained from review text data (High Rating | Low Rating), but the reason for that customer sentiment can also be obtained. This means product sellers can discover the main reasons their customers rated their product high or low and make adjustment accordingly. For example, if a higher number of review text are being classified as "Extremely Disappointed" a product seller can discover the main cause is that the product arrived dented and broken. This could translate to improving packing and shipping procedures in order to ensure the product arrived at the customers' doorstep without any breakage. 
+The classification of text data using semi-supervised methods enables the ability to obtain greater insights from review text. Not only can sentiment analysis be obtained from review text data (High Rating | Low Rating), but the reason for that customer sentiment can also be obtained. This means product sellers can discover the main reasons their customers rated their product high or low and make adjustments accordingly. For example, if an increased number of reviews were being classified as "Extremely Disappointed" a product seller could see the main cause of the low rating was that the product arrived dented and broken. This could translate to improving packing and shipping procedures in order to ensure the product arrived at the customers' doorstep without any breakage. Alternatively, the model could also pick up on the fact that a particular product was purchased as gifts for other family members. This could lead to targeted promotions of the product as a gift during special events.
+
+The world of NLP is an exciting space and I hope to continue to build similar projects that can be applied to solve business solutions and gather important insights to allow business to understand their customers on a higher level.
 
 
 ---
