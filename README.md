@@ -3,7 +3,7 @@
 Semantic Topic Analysis: Amazon Product Reviews (NLP and NMF)
 
 Low Ratings
-![](images/TSNE_Low.png)
+![](images/Front.png)
 
 > Project Goals:
 - Deploy an NLP model to predict High and Low ratings based on user reviews.
