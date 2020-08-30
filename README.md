@@ -32,7 +32,7 @@ This project seeks to develop an NLP model to classify and predict customer sent
 
 ## Data Understanding
 
-The data consisted of 574,628 reviews (75MB json.gz) from Amazon's luxury beauty market. I chose the luxury beauty category due to having the highest ratio of reviews to product (45 reviews/product) with the next closest product category being video games (31 reviews/product). Each review consisted of the following data:
+The data consisted of 574,628 reviews (75MB json.gz) from Amazon's luxury beauty market between 2014 - 2018. I chose the luxury beauty category due to having the highest ratio of reviews to product (45 reviews/product) with the next closest product category being video games (31 reviews/product). Each review consisted of the following data:
 
 1. Overall Rating: 1-5 stars.
 2. Number of Upvotes: # of other users who upvoted review.
