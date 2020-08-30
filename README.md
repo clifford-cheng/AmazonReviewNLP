@@ -51,7 +51,7 @@ There were additional meta-data such as date/time of the review, information of 
 
 
 <p align="center">
-<img src="images/1_Histogram_Per.png" width="600" height="500">
+<img src="images/1_Histogram_Per.png" width="550" height="450">
 <p/>
 
 [Back To The Top](#Semantic-Topic-Analysis)
