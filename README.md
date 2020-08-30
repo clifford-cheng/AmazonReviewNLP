@@ -1,8 +1,6 @@
 
 # Semantic Topic Analysis
 Semantic Topic Analysis: Amazon Product Reviews (NLP and NMF)
-
-Low Ratings
 ![](images/Front_.png)
 
 > Project Goals:
