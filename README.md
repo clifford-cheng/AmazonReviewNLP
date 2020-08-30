@@ -88,6 +88,7 @@ In order to visualize the higher dimensional vectorized text data over 1,050,000
 The classification of text data using semi-supervised methods enables the ability to obtain greater insights from review text. Not only can sentiment analysis be obtained from review text data (High Rating | Low Rating), but the reason for that customer sentiment can also be obtained. This means product sellers can discover the main reasons their customers rated their product high or low and make adjustment accordingly. For example, if a higher number of review text are being classified as "Extremely Disappointed" a product seller can discover the main cause is that the product arrived dented and broken. This could translate to improving packing and shipping procedures in order to ensure the product arrived at the customers' doorstep without any breakage. 
 
 
+--- 
 
 <p align="center">
 <img src="images/TSNE_High.png" width="750" height="600
@@ -107,6 +108,5 @@ The classification of text data using semi-supervised methods enables the abilit
 - LinkedIn - [clifford-cheng](https://www.linkedin.com/in/clifford-cheng/)
 - Email - cliffpcheng@gmail.com
 
-[Back To The Top](#Semantic-Topic-Analysis)
 
 
