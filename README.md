@@ -90,7 +90,7 @@ In order to visualize the higher dimensional vectorized text data, a 1,050,000+ 
 
 The classification of text data using semi-supervised methods enables the ability to obtain greater insights from review text. Not only can sentiment analysis be obtained from review text data (High Rating | Low Rating), but the reason for that customer sentiment can also be obtained. This means product sellers can discover the main reasons their customers rated their product high or low and make adjustments accordingly. For example, if an increased number of reviews were being classified as "Extremely Disappointed" a product seller could see the main cause of the low rating was that the product arrived dented and broken. This could translate to improving packing and shipping procedures in order to ensure the product arrived at the customers' doorstep without any breakage. Alternatively, the model could also pick up on the fact that a particular product was purchased as gifts for other family members. This could lead to targeted promotions of the product as a gift during special events.
 
-The world of NLP is an exciting space and I hope to continue to build similar projects that can be applied to solve business solutions and gather important insights to allow business to understand their customers on a higher level.
+The world of NLP is an exciting space and I hope to continue to build similar projects that can be applied to solve business solutions and gather important insights to allow business to understand their customers on a deeper level.
 
 
 ---
